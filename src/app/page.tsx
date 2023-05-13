@@ -1,7 +1,10 @@
-export const revalidate = 0;
+import Mutation from "~/app/components/Mutation";
 
-export default async function Home() {
-  await new Promise((res) => setTimeout(res, 2000));
-
-  return <div>{Math.random()}</div>;
+export default function Home() {
+  return (
+    <div>
+      <Mutation />
+      {Math.random()}
+    </div>
+  );
 }
